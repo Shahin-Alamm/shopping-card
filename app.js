@@ -1,5 +1,6 @@
 
 function getProductChange(product, isIncrease){
+    const caseInput = document.getElementById ( 'case-count')
     const  productCount = getInputValue(product);
     let  productNewCount =  productCount;
     if(isIncrease == true){
@@ -9,7 +10,8 @@ function getProductChange(product, isIncrease){
         productNewCount =  productCount - 1;
     }
     document.getElementById(product + '-count').value = productNewCount
-    productInput.value =  productNewCount
+    // caseInput.value = productNewCount;
+    caseInput.value =  productNewCount
     let productTotal = 0;
     if(product == 'phone'){
         productTotal = productNewCount * 1219;
